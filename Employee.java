@@ -1,6 +1,6 @@
-package com.jdbctemp.model;
+package com.bhavana.model;
 
-public class Student {
+public class Employee {
 	   int sid;
 	   String name;
 	   int age;
@@ -33,14 +33,14 @@ public class Student {
 		this.age = age;
 	}
 
-	   public Student(int sid, String name, int age) {
+	   public Employee(int sid, String name, int age) {
 		super();
 		this.sid = sid;
 		this.name = name;
 		this.age = age;
 	}
 
-	public Student() {
+	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
 	}

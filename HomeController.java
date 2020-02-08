@@ -1,4 +1,4 @@
-package com.jdbctemp.controller;
+package com.bhavana.controller;
 
 import java.util.List;
 
@@ -7,14 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.jdbctemp.model.Student;
-import com.jdbctemp.service.StudentService;
+import com.bhavana.model.Employee;
+import com.bhavana.service.EmployeeService;
 
 @Controller
 public class HomeController {
 	
 	@Autowired
-	StudentService studentService;
+	EmployeeService employeeService;
 	
    @RequestMapping("/home")
    String home() {
@@ -23,10 +23,10 @@ public class HomeController {
    
    @RequestMapping("/listStudents")
    String getStudents(Model model) {
-	   List<Student> list = studentService.getAllStudents();
+	   List<Employee> list = employeeService.getAllEmployee();
 	   System.out.println(list);
-	   model.addAttribute("liststud", list);
-	   return "listStudents";
+	   model.addAttribute("listemployee", list);
+	   return "listEployee";
    }
    
 }
